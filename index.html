@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/95479de564.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="header">
+<div class="container">
+    <nav>
+        <img src="IMAGES/logo.jpg" class="logo">
+        <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div class="header-text">
+        <p>Fullstack webdeveloper</p>
+        <h1>Hi,I'm <span>Deepika</span> <br>Thota from India</h1>
+    </div>
+</div>
+   </div>
+  <!--  ---------------about------------- -->
+   <div id="about">
+    <div class="container">
+        <div class="row">
+<div class="about-col-1">
+    <img src="IMAGES/user.jpg">
+</div>
+<div class="about-col-2">
+    <h1 class="sub-title">About me</h1>
+    <p>Hello! I’m Deepika, a passionate B.Tech student specializing in Information Technology at Gayatri Vidya Parishad College of Engineering for Women, Visakhapatnam. I’m an aspiring software developer with a keen interest in web development and backend technologies<br>I’ve built a solid foundation in programming with languages like C and concepts such as Data Structures and HTML. Currently, I’m expanding my skills in React.js, Node.js, and databases like MySQL and MongoDB as I work on real-time projects.<br>With a goal to become an IT professional, I’m continuously learning, creating, and striving to grow both personally and professionally. I believe in simplicity, creativity, and the power of small consistent efforts.</p>
+     <div class="tab-titles">
+       <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+        <p class="tab-links" onclick="opentab('education')">Education</p>
+         </div>
+         <div class="tab-contents active-tab" id="skills">
+            <ul>
+                <li><span>UI/UX</span><br>Designing web/app interfaces</li>
+                <li><span>Web development</span><br>Web app Development</li>
+                <li><span>App development</span><br>Building android/os apps</li>
+            </ul>
+         </div>
+         <div class="tab-contents" id="experience">
+            <ul>
+                <li><span>2021-Current</span><br>UI/UX Design Training at ET Institute</li>
+                <li><span>2019-2021</span><br>Team lead at starApp LLC.</li>
+                <li><span>2017-2019</span><br>uI/ux Design Executive at coin digital Ltd.</li>
+                <li><span>2016-2017</span><br>Internship at ekart eCommerce.</li>
+            </ul>
+         </div>
+                  <div class="tab-contents" id="education">
+            <ul>
+                <li><span>2016</span><br>UI/UX Design Training at ET Institute</li>
+                <li><span>2016</span><br>MBA from MIT Bangalore</li>
+                <li><span>2014</span><br>BBA from ISM Bangalore</li>
+            </ul>
+         </div>
+        </div>
+        </div> 
+    </div>
+   </div>
+   <!-- ---------services--------- -->
+    <div id="services">
+        <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Web Development</h2>
+                        <P>I learned HTML,CSS and JS in youtube and got certified in great learning. </P>
+                            <a href="#">Learn more</a>
+                    </div>
+                     <div>
+                        <i class="fa-solid fa-crop-simple"></i>
+                        <h2>JAVA</h2>
+                        <P>I learned java in many platform and I scored 73% in NPTEL offline test and also got certified in that. </P>
+                            <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-app-store"></i>
+                        <h2>Datascience using Python</h2>
+                        <P>I learned this course from youtube and also done an Internship on this at Infosys SpringBoard by the selection of college management. </P>
+                            <a href="#">Learn more</a>
+                    </div>                    
+                </div>
+        </div>
+    </div>
+    <!-- ----------------------portfolio----------------------- -->
+     <div id="portfolio">
+        <div class="container">
+               <h1 class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="IMAGES/work-1.jpg" >
+                        <div class="layer">
+                            <h3>Social Media App</h3>
+                            <p>The app connects you to the talented<br> 
+                                people around the world. <br>
+                                Download it from playstore.</p>
+                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="IMAGES/work-2.jpg" >
+                            <div class="layer">
+                            <h3>Music App</h3>
+                            <p>The app connects you to the talented <br>
+                                 people around the world. <br>
+                                Download it from playstore.</p>
+                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                     <div class="work">
+                        <img src="IMAGES/work-3.jpg" >
+                            <div class="layer">
+                            <h3>Online shopping App</h3>
+                            <p>The app connects you to the talented <br>
+                                people around the world. <br>
+                                Download it from playstore.</p>
+                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>                   
+                </div>
+                <a href="#" class="btn">See more</a>
+        </div>
+     </div>
+     <!------ ------------contact-------------- -->
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                   <h1 class="sub-title">Contact Me</h1>
+                   <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
+                   <p><i class="fa-solid fa-phone"></i>0123456789</p>
+                   <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                   <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>                                       
+                   </div>
+                   <a href="IMAGES/my-cv.jpg" download class="btn btn2">Download CV</a>
+                </div>
+                  <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="email" placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ Deepika. Made with<i class="fa-solid fa-heart"></i> by Easy tutorials</p>
+        </div>
+     </div>
+   <script>
+
+     var tablinks=document.getElementsByClassName("tab-links");
+     var tabcontents=document.getElementsByClassName("tab-contents");
+
+       function opentab(tabname){
+             for(tablink of tablinks){
+                     tablink.classList.remove("active-link");
+              }
+            for(tabcontent of tabcontents){
+                     tabcontent.classList.remove("active-tab");
+              }
+              event.currentTarget.classList.add("active-link");
+              document.getElementById(tabname).classList.add("active-tab");
+       }
+   </script>
+   <script>
+         var sidemenu= document.getElementById("sidemenu");
+          
+         function openmenu(){
+            sidemenu.style.right="0";
+         }
+         function closemenu(){
+            sidemenu.style.right="-200px";
+         }
+   </script>
+   <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzL1o4x7S4O1M9GeTBfnIz8IkLLbb-YDhwWnRqLNxmVkB2wgXUVN1S9FOTq6AYDlH_1_g/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg=document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML="Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML=""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+</body>
+</html>
