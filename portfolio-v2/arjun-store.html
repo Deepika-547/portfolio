@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arjun Store | Deepika Thota</title>
+  <meta name="description" content="Arjun Store — a hyperlocal grocery delivery web app built and deployed by Deepika Thota." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="nav-wrap">
+      <a href="index.html#home" class="logo">
+        <span class="logo-badge">DT</span>
+        <span class="logo-text">Deepika</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <a href="THOTA_DEEPIKA.pdf" class="btn btn--ghost btn--sm" download>Resume</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html#home" class="mobile-link">Home</a>
+    <a href="index.html#about" class="mobile-link">About</a>
+    <a href="index.html#portfolio" class="mobile-link">Portfolio</a>
+    <a href="index.html#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <main>
+    <section class="section project-hero">
+      <div class="container">
+        <a href="index.html#portfolio" class="back-link">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M3 8l5-5M3 8l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to Portfolio
+        </a>
+
+        <div class="project-detail-head">
+          <div>
+            <span class="proj-kicker">Flagship project · Live in production</span>
+            <h1>Arjun Store</h1>
+          </div>
+        </div>
+
+        <div class="project-detail-grid">
+          <div>
+            <div class="project-media-large">
+              <img src="web.jpg" alt="Arjun Store grocery delivery web app screenshot" loading="lazy" />
+            </div>
+
+            <p class="project-desc" style="margin-top:28px;">
+              Arjun Store is a hyperlocal grocery delivery web application that lets customers
+              browse a live product catalog, add items to a cart, and place orders with
+              OTP-verified accounts. I designed, built, and deployed the entire system solo —
+              from the database schema to the production server — and continue to maintain and
+              improve it.
+            </p>
+
+            <div class="project-detail-links">
+              <a href="https://arjun-store.onrender.com" target="_blank" rel="noopener" class="btn btn--primary">
+                <span>Visit Live Site</span>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+
+            <div class="detail-card">
+              <h2>Key Features</h2>
+              <ul class="feature-list">
+                <li>Browse a live, categorized grocery catalog with search</li>
+                <li>Secure sign-up &amp; login with JWT authentication and bcrypt password hashing</li>
+                <li>Email OTP verification and order notifications, sent via Brevo SMTP</li>
+                <li>Order placement and tracking backed by MongoDB &amp; Mongoose</li>
+                <li>Continuous uptime monitoring with UptimeRobot and a submitted sitemap.xml for Google Search Console</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-side">
+            <div class="detail-card">
+              <h2>Technologies Used</h2>
+              <div class="project-stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Mongoose</span><span>JWT</span><span>bcrypt</span><span>Brevo SMTP</span><span>Render</span><span>UptimeRobot</span>
+              </div>
+            </div>
+
+            <div class="detail-card">
+              <h2>Behind the Scenes</h2>
+              <p class="muted" style="font-size:0.94rem;">
+                Hosting this project on Render's free tier meant solving real production problems:
+                migrating email delivery from Gmail/SendGrid to Brevo for reliable OTP and order
+                emails, and working around free-tier "sleep" behavior that was blocking Google
+                Search Console verification — fixed with UptimeRobot keeping the service awake.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Deepika Thota. Built with HTML, CSS &amp; vanilla JS.</span>
+      <a href="index.html#home" class="footer-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

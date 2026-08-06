@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Journal Formatter | Deepika Thota</title>
+  <meta name="description" content="Journal Formatter — an AI-powered journal formatting tool built and deployed by Deepika Thota." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="nav-wrap">
+      <a href="index.html#home" class="logo">
+        <span class="logo-badge">DT</span>
+        <span class="logo-text">Deepika</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <a href="THOTA_DEEPIKA.pdf" class="btn btn--ghost btn--sm" download>Resume</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html#home" class="mobile-link">Home</a>
+    <a href="index.html#about" class="mobile-link">About</a>
+    <a href="index.html#portfolio" class="mobile-link">Portfolio</a>
+    <a href="index.html#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <main>
+    <section class="section project-hero">
+      <div class="container">
+        <a href="index.html#portfolio" class="back-link">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M3 8l5-5M3 8l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to Portfolio
+        </a>
+
+        <div class="project-detail-head">
+          <div>
+            <span class="proj-kicker">AI-powered tool · Live in production</span>
+            <h1>Journal Formatter</h1>
+          </div>
+        </div>
+
+        <div class="project-detail-grid">
+          <div>
+            <div class="project-media-large is-icon">
+              <svg width="96" height="96" viewBox="0 0 24 24" fill="none"><path d="M4 4h12l4 4v12H4V4Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M16 4v4h4M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            </div>
+
+            <p class="project-desc" style="margin-top:28px;">
+              Journal Formatter is an AI writing companion that takes raw, unstructured journal
+              entries and reformats them into clean, well-organized text. It pairs a React + Vite
+              frontend with an Express.js backend that calls the Google Gemini API to do the
+              actual reformatting work.
+            </p>
+
+            <div class="project-detail-links">
+              <a href="https://github.com/Deepika-547/Journal-formatter" target="_blank" rel="noopener" class="btn btn--primary">
+                <span>View on GitHub</span>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+
+            <div class="detail-card">
+              <h2>Key Features</h2>
+              <ul class="feature-list">
+                <li>Paste in messy, free-form journal text and get back a cleanly structured version</li>
+                <li>Powered by the Google Gemini API for natural-language reformatting</li>
+                <li>Fast, modern React + Vite frontend for instant feedback</li>
+                <li>Express.js backend handling API requests and environment configuration</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-side">
+            <div class="detail-card">
+              <h2>Technologies Used</h2>
+              <div class="project-stack">
+                <span>React</span><span>Vite</span><span>Express.js</span><span>Google Gemini API</span><span>Railway</span><span>Node.js</span>
+              </div>
+            </div>
+
+            <div class="detail-card">
+              <h2>Behind the Scenes</h2>
+              <p class="muted" style="font-size:0.94rem;">
+                Deploying to Railway involved fixing a TypeScript configuration issue where
+                <code>process.env.PORT</code> needed to be explicitly wrapped with
+                <code>Number()</code> before the server would bind correctly — a small but
+                important production debugging step.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Deepika Thota. Built with HTML, CSS &amp; vanilla JS.</span>
+      <a href="index.html#home" class="footer-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
