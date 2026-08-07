@@ -5,23 +5,30 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------------------------------------------------------
-     Welcome splash screen (shown once per browser session)
+     Preloader
   --------------------------------------------------------------- */
-  const splash = document.getElementById('splash');
-  if (splash) {
-    if (sessionStorage.getItem('splashShown')) {
-      splash.remove();
-    } else {
-      document.body.style.overflow = 'hidden';
-      const dismiss = () => {
-        splash.classList.add('hide');
-        document.body.style.overflow = '';
-        sessionStorage.setItem('splashShown', '1');
-        setTimeout(() => splash.remove(), 800);
-      };
-      const timer = setTimeout(dismiss, 2200);
-      splash.addEventListener('click', () => { clearTimeout(timer); dismiss(); });
-    }
+  document.body.classList.add('preloading');
+  const preloader = document.getElementById('preloader');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const minDisplay = reducedMotion ? 0 : 1500;
+  const loadStart = performance.now();
+
+  function hidePreloader() {
+    const elapsed = performance.now() - loadStart;
+    const wait = Math.max(minDisplay - elapsed, 0);
+    setTimeout(() => {
+      if (preloader) preloader.classList.add('preloader--done');
+      document.body.classList.remove('preloading');
+      setTimeout(() => { if (preloader) preloader.style.display = 'none'; }, 650);
+    }, wait);
+  }
+
+  if (document.readyState === 'complete') {
+    hidePreloader();
+  } else {
+    window.addEventListener('load', hidePreloader);
+    // Fallback in case 'load' is delayed by slow assets
+    setTimeout(hidePreloader, 4000);
   }
 
   /* ---------------------------------------------------------------
@@ -92,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
   --------------------------------------------------------------- */
   const revealEls = document.querySelectorAll('[data-reveal]');
 
-  ['.hero-actions', '.cards-grid', '.cards-grid--certs', '.tech-grid', '.stats-row'].forEach(sel => {
+  ['.hero-actions', '.cards-grid', '.cards-grid--certs', '.tech-grid', '.stats-row', '.expertise-grid', '.process-grid', '.skills-grid', '.exp-grid', '.mini-timeline', '.quick-facts'].forEach(sel => {
     document.querySelectorAll(sel).forEach(parent => {
       Array.from(parent.children).forEach((child, i) => {
         if (child.hasAttribute('data-reveal')) child.style.setProperty('--stagger', i);
@@ -112,44 +119,25 @@ document.addEventListener('DOMContentLoaded', () => {
   revealEls.forEach(el => revealObserver.observe(el));
 
   /* ---------------------------------------------------------------
-     Portfolio Showcase tabs
+     Skill bars (Tech Stack section) — animate fill on scroll into view
   --------------------------------------------------------------- */
-  const tabs = Array.from(document.querySelectorAll('.tab'));
-  const tabIndicator = document.getElementById('tabIndicator');
-  const panels = {
-    projects: document.getElementById('panel-projects'),
-    certificates: document.getElementById('panel-certificates'),
-    techstack: document.getElementById('panel-techstack'),
-  };
-
-  function moveTabIndicator(tab) {
-    if (!tab || !tabIndicator) return;
-    const wrapRect = tab.parentElement.getBoundingClientRect();
-    const rect = tab.getBoundingClientRect();
-    tabIndicator.style.left = (rect.left - wrapRect.left) + 'px';
-    tabIndicator.style.width = rect.width + 'px';
-  }
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      moveTabIndicator(tab);
-
-      Object.values(panels).forEach(p => p && p.classList.remove('active'));
-      const target = panels[tab.getAttribute('data-tab')];
-      if (target) {
-        target.classList.add('active');
-        // Reveal newly-shown cards
-        target.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+  const skillBars = document.querySelectorAll('.skill-bar');
+  const skillObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const bar = entry.target;
+      const fill = bar.querySelector('.skill-bar-fill');
+      const level = bar.getAttribute('data-level') || 0;
+      if (fill) {
+        requestAnimationFrame(() => {
+          fill.style.width = level + '%';
+        });
       }
+      obs.unobserve(bar);
     });
-  });
+  }, { threshold: 0.3 });
 
-  if (tabs.length) {
-    window.addEventListener('load', () => moveTabIndicator(document.querySelector('.tab.active')));
-    window.addEventListener('resize', () => moveTabIndicator(document.querySelector('.tab.active')));
-  }
+  skillBars.forEach(bar => skillObserver.observe(bar));
 
   /* ---------------------------------------------------------------
      Animated stat counters

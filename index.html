@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Deepika Thota | Full Stack Developer Portfolio</title>
-  <meta name="description" content="Portfolio of Deepika Thota — Full Stack Web Developer & B.Tech IT student. Projects, certificates, tech stack and contact." />
+  <meta name="description" content="Portfolio of Deepika Thota — Full Stack Web Developer & B.Tech IT student. Expertise, projects, process, tech stack, experience, certifications and contact." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,18 +14,15 @@
 </head>
 <body>
 
-  <!-- Welcome splash -->
-  <div class="splash" id="splash">
-    <div class="splash-glow" aria-hidden="true"></div>
-    <div class="splash-content">
-      <div class="splash-icons" aria-hidden="true">
-        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 4 3 10l6 6M15 4l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
-        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.4 8.4 0 0 1-1.2 4.4L21 20l-4.2-1.1a8.5 8.5 0 1 1 4.2-7.4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" role="status" aria-live="polite" aria-label="Loading portfolio">
+    <div class="preloader-glow"></div>
+    <div class="preloader-content">
+      <div class="preloader-logo">
+        <span class="preloader-logo-badge">DT</span>
       </div>
-      <h1 class="splash-title">Welcome to my <span class="text-gradient">Portfolio Website</span></h1>
-      <p class="splash-sub">// loading experience...</p>
-      <div class="splash-bar"><span></span></div>
+      <p class="preloader-text">Welcome to my portfolio</p>
+      <div class="preloader-bar"><span class="preloader-bar-fill"></span></div>
     </div>
   </div>
 
@@ -41,13 +38,15 @@
     <div class="nav-wrap">
       <a href="#home" class="logo">
         <span class="logo-badge">DT</span>
-        <span class="logo-text">Deepika Thota</span>
+        <span class="logo-text">Thota Deepika</span>
       </a>
 
       <nav class="nav-links" id="navLinks">
         <a href="#home" class="nav-link" data-nav>Home</a>
         <a href="#about" class="nav-link" data-nav>About</a>
+        <a href="#expertise" class="nav-link" data-nav>Expertise</a>
         <a href="#portfolio" class="nav-link" data-nav>Portfolio</a>
+        <a href="#experience" class="nav-link" data-nav>Experience</a>
         <a href="#contact" class="nav-link" data-nav>Contact</a>
       </nav>
 
@@ -63,7 +62,9 @@
   <div class="mobile-nav" id="mobileNav">
     <a href="#home" class="mobile-link" data-nav>Home</a>
     <a href="#about" class="mobile-link" data-nav>About</a>
+    <a href="#expertise" class="mobile-link" data-nav>Expertise</a>
     <a href="#portfolio" class="mobile-link" data-nav>Portfolio</a>
+    <a href="#experience" class="mobile-link" data-nav>Experience</a>
     <a href="#contact" class="mobile-link" data-nav>Contact</a>
     <a href="THOTA_DEEPIKA.pdf" class="btn btn--primary" download style="margin-top:12px;">Download CV</a>
   </div>
@@ -151,34 +152,66 @@
     </section>
 
     <!-- ABOUT -->
-    <section class="section section--about" id="about">
+    <section class="section" id="about">
       <div class="container">
-
-        <div class="about-section-head reveal" data-reveal>
-          <h2 class="about-section-title">About Me</h2>
-          <p class="about-section-tagline">✦ Transforming ideas into digital experiences ✦</p>
+        <div class="section-head section-head--center reveal" data-reveal>
+          <span class="section-eyebrow">About Me</span>
+          <h2 class="section-title">Transforming ideas into digital experiences.</h2>
         </div>
 
         <div class="about-grid">
           <div class="about-copy reveal" data-reveal>
-            <p class="about-greeting-small">Hello, I'm</p>
-            <p class="about-greeting">Thota Deepika Lakshmi Nageswari</p>
+            <p class="about-greeting">Hello, I'm <span class="text-gradient">Deepika Thota</span></p>
             <p>
               I'm a B.Tech Information Technology student at Gayatri Vidya Parishad College of
               Engineering for Women, Visakhapatnam (2023–2027), and an aspiring software developer
               with a strong interest in full-stack web development, backend systems, and applied
               data science.
             </p>
-            <div class="about-actions">
-              <a href="THOTA_DEEPIKA.pdf" class="btn btn--primary" download>Download CV</a>
-              <a href="#portfolio" class="btn btn--outline">View Projects</a>
-            </div>
+            <p>
+              I learn best by building — every project here is something I designed, coded, and
+              personally deployed to a live server, then debugged in production. I'm currently
+              preparing for junior developer interviews and shipping new features for my live apps.
+            </p>
           </div>
 
           <div class="about-photo reveal" data-reveal>
             <div class="photo-frame">
               <img src="user.jpg" alt="Portrait of Deepika Thota" loading="lazy" />
             </div>
+          </div>
+        </div>
+
+        <div class="quick-facts reveal" data-reveal>
+          <span class="quick-fact"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>Visakhapatnam, Andhra Pradesh, India</span>
+          <span class="quick-fact"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22 10 12 5 2 10l10 5 10-5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 12v5c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>B.Tech IT · CGPA 8.29 · 2026</span>
+          <span class="quick-fact"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Lumora Systems &amp; Infosys Springboard</span>
+        </div>
+
+        <div class="about-actions">
+          <a href="THOTA_DEEPIKA.pdf" class="btn btn--primary" download>Download CV</a>
+          <a href="#portfolio" class="btn btn--outline">View Projects</a>
+        </div>
+
+        <!-- Mini education/experience timeline -->
+        <div class="mini-timeline reveal" data-reveal>
+          <div class="mini-timeline-item">
+            <span class="mini-timeline-dot"></span>
+            <span class="mini-timeline-date">2023 – 2027</span>
+            <h4>B.Tech, Information Technology</h4>
+            <p>Gayatri Vidya Parishad College of Engineering for Women, Visakhapatnam · CGPA 8.29</p>
+          </div>
+          <div class="mini-timeline-item">
+            <span class="mini-timeline-dot"></span>
+            <span class="mini-timeline-date">2025</span>
+            <h4>Data Science Intern — Infosys Springboard</h4>
+            <p>AICTE-affiliated program in data analysis, preprocessing &amp; visualization with Python.</p>
+          </div>
+          <div class="mini-timeline-item">
+            <span class="mini-timeline-dot"></span>
+            <span class="mini-timeline-date">2026</span>
+            <h4>Software Engineering Intern — Lumora Systems</h4>
+            <p>On-site internship building full-stack features, including the Journal Formatter AI tool.</p>
           </div>
         </div>
 
@@ -208,243 +241,332 @@
       </div>
     </section>
 
+    <!-- EXPERTISE -->
+    <section class="section" id="expertise">
+      <div class="container">
+        <div class="section-head section-head--center reveal" data-reveal>
+          <span class="section-eyebrow">Core Capabilities</span>
+          <h2 class="section-title">What I bring to a product team.</h2>
+          <p class="section-sub">Drawn directly from building and shipping my own full-stack applications end to end.</p>
+        </div>
+
+        <div class="expertise-grid">
+          <div class="expertise-card reveal" data-reveal>
+            <span class="expertise-num">01</span>
+            <div class="expertise-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 21h8M12 18v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <h3>Full-Stack Web Development</h3>
+            <p>Building complete apps end to end — React/Vite front ends wired to Node.js &amp; Express APIs and MongoDB or PostgreSQL data layers.</p>
+          </div>
+
+          <div class="expertise-card reveal" data-reveal>
+            <span class="expertise-num">02</span>
+            <div class="expertise-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 7a8 3 0 0 0 16 0M4 7a8 3 0 0 1 16 0M4 7v10a8 3 0 0 0 16 0V7" stroke="currentColor" stroke-width="1.6"/></svg></div>
+            <h3>Database &amp; Schema Design</h3>
+            <p>Designing relational and document schemas — from MongoDB collections to PostgreSQL/Supabase tables with proper foreign keys and types.</p>
+          </div>
+
+          <div class="expertise-card reveal" data-reveal>
+            <span class="expertise-num">03</span>
+            <div class="expertise-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.6"/></svg></div>
+            <h3>REST API Design</h3>
+            <p>Structuring clean, authenticated REST endpoints with Express — request validation, error handling, and role-based access.</p>
+          </div>
+
+          <div class="expertise-card reveal" data-reveal>
+            <span class="expertise-num">04</span>
+            <div class="expertise-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4Z" stroke="currentColor" stroke-width="1.6"/><path d="M6 12v1a6 6 0 0 0 12 0v-1M12 19v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <h3>Auth &amp; Security</h3>
+            <p>Implementing JWT auth, bcrypt password hashing, and OTP email verification with Brevo SMTP for real production sign-up flows.</p>
+          </div>
+
+          <div class="expertise-card reveal" data-reveal>
+            <span class="expertise-num">05</span>
+            <div class="expertise-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 7l9 5 9-5M12 12v10" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+            <h3>AI-Assisted Features</h3>
+            <p>Integrating LLM APIs like Google Gemini into real product flows — e.g. Journal Formatter's raw-text-to-structured-writing pipeline.</p>
+          </div>
+
+          <div class="expertise-card reveal" data-reveal>
+            <span class="expertise-num">06</span>
+            <div class="expertise-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M9 8v6M15 8v6M6 11h2M16 11h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <h3>Responsive, Accessible UI</h3>
+            <p>Mobile-first layouts, pill-shaped search, and localized features like Telugu voice search via the Web Speech API.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- PORTFOLIO SHOWCASE -->
     <section class="section section--alt" id="portfolio">
       <div class="container">
         <div class="section-head section-head--center reveal" data-reveal>
-          <h2 class="portfolio-showcase-title">Portfolio Showcase</h2>
-          <p class="portfolio-showcase-sub">Explore my journey through projects, certifications, and technical expertise. Each section represents a milestone in my continuous learning path.</p>
+          <span class="section-eyebrow">Portfolio</span>
+          <h2 class="section-title">Projects I've designed, built, and shipped.</h2>
+          <p class="section-sub">Each one deployed and debugged on a live server, not just left running locally.</p>
         </div>
 
-        <!-- Tabs -->
-        <div class="tabs reveal" data-reveal>
-          <button class="tab active" data-tab="projects">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="3" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="3" y="13" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="13" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.8"/></svg>
-            Projects
-          </button>
-          <button class="tab" data-tab="certificates">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="5" stroke="currentColor" stroke-width="1.8"/><path d="M8.5 12.5 7 21l5-3 5 3-1.5-8.5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-            Certificates
-          </button>
-          <button class="tab" data-tab="techstack">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M9 4 3 10l6 6M15 4l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Tech Stack
-          </button>
-          <span class="tab-indicator" id="tabIndicator"></span>
-        </div>
-
-        <!-- Projects panel -->
         <div class="tab-panel active" id="panel-projects">
-          <div class="ref-cards-grid">
+          <div class="cards-grid">
 
-            <article class="ref-card reveal" data-reveal>
-              <div class="ref-card-media">
-                <img src="web.jpg" alt="Arjun-stor| onlice grocery store preview" loading="lazy" />
+            <article class="proj-card reveal" data-reveal>
+              <div class="proj-media">
+                <img src="web.jpg" alt="Arjun store| Online grocery store" loading="lazy" />
               </div>
-              <div class="ref-card-body">
+              <div class="proj-body">
                 <h3>Arjun Store</h3>
                 <p>A hyperlocal grocery delivery web app with OTP-verified accounts, live order tracking, and a full Node/Express/MongoDB backend.</p>
-              </div>
-              <div class="ref-card-footer">
-                <a href="https://arjun-store.onrender.com" target="_blank" rel="noopener" class="ref-btn ref-btn--primary">Live Demo</a>
-                <a href="arjun-store.html" class="ref-btn ref-btn--outline">Details</a>
+                <div class="proj-tags">
+                  <span>Node.js</span><span>MongoDB</span><span>JWT</span>
+                </div>
+                <div class="proj-links">
+                  <a href="https://arjun-store.onrender.com" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Live Demo</a>
+                  <a href="arjun-store.html" class="btn btn--outline btn--sm">Details</a>
+                </div>
               </div>
             </article>
 
-            <article class="ref-card reveal" data-reveal>
-              <div class="ref-card-media ref-card-media--icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><path d="M4 4h12l4 4v12H4V4Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M16 4v4h4M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-                <span class="ref-live-badge"><span class="pulse"></span> Live</span>
+            <article class="proj-card reveal" data-reveal>
+              <div class="proj-media proj-media--icon">
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none"><path d="M4 4h12l4 4v12H4V4Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M16 4v4h4M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+                <span class="proj-badge"><span class="pulse"></span> Live</span>
               </div>
-              <div class="ref-card-body">
+              <div class="proj-body">
                 <h3>Journal Formatter</h3>
                 <p>An AI writing companion that reformats raw journal entries into clean, structured text using the Google Gemini API.</p>
-              </div>
-              <div class="ref-card-footer">
-                <a href="https://github.com/Deepika-547/Journal-formatter" target="_blank" rel="noopener" class="ref-btn ref-btn--primary">GitHub</a>
-                <a href="journal-formatter.html" class="ref-btn ref-btn--outline">Details</a>
-              </div>
-            </article>
-
-            <article class="ref-card reveal" data-reveal>
-              <div class="ref-card-media">
-                <img src="redstore.jpg" alt="RedStore e-commerce preview" loading="lazy" />
-              </div>
-              <div class="ref-card-body">
-                <h3>RedStore — E-Commerce</h3>
-                <p>A responsive sports-store front end with login/register flows, built during my internship at Future Interns.</p>
-              </div>
-              <div class="ref-card-footer">
-                <a href="https://deepika-547.github.io/E-commerce-website/index.html" target="_blank" rel="noopener" class="ref-btn ref-btn--primary">Live Demo</a>
-                <a href="ecommerce.html" class="ref-btn ref-btn--outline">Details</a>
+                <div class="proj-tags">
+                  <span>React</span><span>Vite</span><span>Gemini API</span>
+                </div>
+                <div class="proj-links">
+                  <a href="https://github.com/Deepika-547/Journal-formatter" target="_blank" rel="noopener" class="btn btn--primary btn--sm">GitHub</a>
+                  <a href="journal-formatter.html" class="btn btn--outline btn--sm">Details</a>
+                </div>
               </div>
             </article>
 
-            <article class="ref-card reveal" data-reveal>
-              <div class="ref-card-media">
-                <img src="overall.jpg" alt="Accident Analysis System preview" loading="lazy" />
+            <article class="proj-card reveal" data-reveal>
+              <div class="proj-media">
+                <img src="redstore.jpg" alt="RedStore e-commerce website preview" loading="lazy" />
               </div>
-              <div class="ref-card-body">
+              <div class="proj-body">
+                <h3>RedStore — E-Commerce Website</h3>
+                <p>A responsive sports-store front end with login/register flows, built during my Web Development internship at Future Interns.</p>
+                <div class="proj-tags">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+                <div class="proj-links">
+                  <a href="https://deepika-547.github.io/E-commerce-website/index.html" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Live Demo</a>
+                  <a href="ecommerce.html" class="btn btn--outline btn--sm">Details</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="proj-card reveal" data-reveal>
+              <div class="proj-media">
+                <img src="overall.jpg" alt="Accident Analysis System dashboard preview" loading="lazy" />
+              </div>
+              <div class="proj-body">
                 <h3>Accident Analysis System</h3>
-                <p>Interactive Streamlit dashboard analyzing 12,000+ traffic accident records by severity, weather, road and time.</p>
-              </div>
-              <div class="ref-card-footer">
-                <a href="https://accident-analysis-system-kbsu8but2bcuktr3gekxkt.streamlit.app/" target="_blank" rel="noopener" class="ref-btn ref-btn--primary">Live Demo</a>
-                <a href="data-science.html" class="ref-btn ref-btn--outline">Details</a>
-              </div>
-            </article>
-
-          </div>
-        </div>
-
-        <!-- Certificates panel -->
-        <div class="tab-panel" id="panel-certificates">
-          <div class="cards-grid cards-grid--certs">
-
-            <article class="cert-card reveal" data-reveal>
-              <div class="cert-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="5" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12.5 7 21l5-3 5 3-1.5-8.5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-              </div>
-              <div class="cert-body">
-                <span class="proj-kicker">2025</span>
-                <h3>Future Interns — Web Development</h3>
-                <p>Worked on real-world web projects, strengthening problem-solving and front-end development skills using HTML, CSS &amp; JavaScript.</p>
-                <a href="future_interns.jpeg" target="_blank" rel="noopener" class="btn btn--outline btn--sm">View Certificate</a>
-              </div>
-            </article>
-
-            <article class="cert-card reveal" data-reveal>
-              <div class="cert-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="5" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12.5 7 21l5-3 5 3-1.5-8.5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-              </div>
-              <div class="cert-body">
-                <span class="proj-kicker">2025</span>
-                <h3>Infosys Springboard — Data Science with Python</h3>
-                <p>AICTE-affiliated program covering data analysis, preprocessing and visualization using Pandas, NumPy &amp; Matplotlib.</p>
-                <a href="internshipclg.jpeg" target="_blank" rel="noopener" class="btn btn--outline btn--sm">View Certificate</a>
+                <p>An Infosys Springboard project — an interactive Streamlit dashboard analyzing 12,000+ traffic accident records by severity, weather, road and time.</p>
+                <div class="proj-tags">
+                  <span>Python</span><span>Pandas</span><span>Streamlit</span><span>Matplotlib</span>
+                </div>
+                <div class="proj-links">
+                  <a href="https://accident-analysis-system-kbsu8but2bcuktr3gekxkt.streamlit.app/" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Live Demo</a>
+                  <a href="data-science.html" class="btn btn--outline btn--sm">Details</a>
+                </div>
               </div>
             </article>
 
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Tech stack panel -->
-        <div class="tab-panel" id="panel-techstack">
-          <div class="tech-grid">
+    <!-- PROCESS WALKTHROUGH -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head section-head--center reveal" data-reveal>
+          <span class="section-eyebrow">Process Walkthrough</span>
+          <h2 class="section-title">Case study — building Arjun Store.</h2>
+          <p class="section-sub">How a hyperlocal grocery delivery app went from idea to a live, deployed server.</p>
+        </div>
 
-            <div class="tech-tile reveal" data-reveal>
-              <span class="tech-tile-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24"><path fill="#E44D26" d="M3 2h18l-1.6 18L12 22l-6.4-2Z"/><path fill="#F16529" d="M12 4v16.4l5.2-1.4L18.6 4Z"/><path fill="#FFFFFF" d="M12 7H7.2l.2 2H12v2H7.6l.3 3.2H12v2H8.1L8 14.2h2.1l.1 1.2 1.8.5 1.8-.5.2-2H12v-2h2.1l.2-2H12V9h4.4l.2-2Z" opacity="0.0"/><path fill="#EBEBEB" d="M12 7v2h2.7l-.2 2H12v2h2.3l-.2 2.2L12 16l-2.1-.6-.1-1.5H8.1l.2 2.5 3.7 1 3.7-1 .5-5.6.05-.6.3-3.4H12Z"/></svg>
-              </span>
-              <span class="tech-tile-label">HTML5</span>
-            </div>
-
-            <div class="tech-tile reveal" data-reveal>
-              <span class="tech-tile-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24"><path fill="#1572B6" d="M3 2h18l-1.6 18L12 22l-6.4-2Z"/><path fill="#33A9DC" d="M12 4v16.4l5.2-1.4L18.6 4Z"/><path fill="#EBEBEB" d="M12 7H7.4l.2 2H12v2H7.8l.5 5.5 3.7 1 3.7-1 .4-4.5H12v-2h4.4l-.4 4-.1.9-.1.6-3.8 1-3.8-1-.3-2.9h2l.1 1.4 2 .5 2-.5.2-2.1H8.3l-.5-5.5H12Z"/></svg>
-              </span>
-              <span class="tech-tile-label">CSS3</span>
-            </div>
-
-            <div class="tech-tile reveal" data-reveal>
-              <span class="tech-tile-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#F7DF1E"/><path fill="#1A1A1A" d="M16.3 14.6c.3.5.7.9 1.4.9.6 0 1-.3 1-.7 0-.5-.4-.7-1.1-1l-.4-.2c-1.1-.5-1.9-1.1-1.9-2.4 0-1.2.9-2.1 2.4-2.1 1 0 1.8.4 2.3 1.3l-1.3.8c-.3-.5-.5-.7-1-.7-.4 0-.7.3-.7.7 0 .5.3.6.9.9l.4.2c1.3.6 2.1 1.1 2.1 2.5 0 1.4-1.1 2.2-2.6 2.2-1.5 0-2.4-.7-2.9-1.6Zm-5.7.1c.2.4.5.8 1 .8.5 0 .8-.2.8-1v-5.4h1.6v5.4c0 1.6-.9 2.4-2.3 2.4-1.2 0-1.9-.6-2.3-1.4Z"/></svg>
-              </span>
-              <span class="tech-tile-label">JavaScript</span>
-            </div>
-
-            <div class="tech-tile reveal" data-reveal>
-              <span class="tech-tile-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.2" fill="#61DAFB"/><g fill="none" stroke="#61DAFB" stroke-width="1.1"><ellipse cx="12" cy="12" rx="10" ry="4.2"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(120 12 12)"/></g></svg>
-              </span>
-              <span class="tech-tile-label">React</span>
-            </div>
-
-            <div class="tech-tile reveal" data-reveal>
-              <span class="tech-tile-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24"><path fill="#646CFF" d="M21.8 4.3 12.6 21a.7.7 0 0 1-1.2 0L2.2 4.3a.7.7 0 0 1 .7-1l9 1.7 8.9-1.7a.7.7 0 0 1 .8 1Z"/><path fill="#FFDD35" d="M16.3 3.6 11.9 11l-.3 5.8-1.5-7.6-4.6-5Z"/></svg>
-              </span>
-              <span class="tech-tile-label">Vite</span>
-            </div>
-
-            <div class="tech-tile reveal" data-reveal>
-              <span class="tech-tile-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24"><path fill="#539E43" d="M12 1.5 21 6.5v11L12 22.5 3 17.5v-11Z"/><path fill="#FFFFFF" d="M9.6 9.2v6.6h-1.4V9.2Zm2.3 0 2.5 3.7V9.2h1.4v6.6h-1.3l-2.5-3.7v3.7H10.6V9.2Z"/></svg>
-              </span>
-              <span class="tech-tile-label">Node.js</span>
-            </div>
-
-            <div class="tech-tile reveal" data-reveal>
-              <span class="tech-tile-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#1A1A1A"/><path fill="#FFFFFF" d="M3.5 15.5 7.8 12 3.5 8.5h2.1L9 11.3v1.4L5.6 15.5ZM10.5 8.5h6.8L19 10h-6.8v1.3H18v1.4h-5.8V14H19l-1.7 1.5h-6.8Z"/></svg>
-              </span>
-              <span class="tech-tile-label">Express</span>
-            </div>
-
-            <div class="tech-tile reveal" data-reveal>
-              <span class="tech-tile-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24"><path fill="#47A248" d="M12 2C9 5 7 8.5 7 12.5c0 3.6 1.9 6.4 4.2 7.7.3.2.6.2.8 0C14.4 18.9 17 16.1 17 12.5 17 8.5 15 5 12 2Z"/><path fill="#FFFFFF" d="M11.6 6.5h.8v13.8l-.8-.4Z"/></svg>
-              </span>
-              <span class="tech-tile-label">MongoDB</span>
-            </div>
-
-            <div class="tech-tile reveal" data-reveal>
-              <span class="tech-tile-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24"><path fill="#3776AB" d="M11.9 1.5c-4.7 0-4.4 2-4.4 2v2.1h4.5v.6H5.6S2 6 2 10.8s3.1 4.6 3.1 4.6h1.8v-2.3s-.1-3.1 3-3.1h4.2s2.9.1 2.9-2.8V4.3s.4-2.8-4.3-2.8Zm-2.5 1.4a.9.9 0 1 1 0 1.7.9.9 0 0 1 0-1.7Z"/><path fill="#FFD43B" d="M12.1 22.5c4.7 0 4.4-2 4.4-2v-2.1h-4.5v-.6h6.4s3.6.4 3.6-4.4-3.1-4.6-3.1-4.6h-1.8v2.3s.1 3.1-3 3.1H9.9s-2.9-.1-2.9 2.8v3.1s-.4 2.8 4.3 2.8Zm2.5-1.4a.9.9 0 1 1 0-1.7.9.9 0 0 1 0 1.7Z"/></svg>
-              </span>
-              <span class="tech-tile-label">Python</span>
-            </div>
-
-            <div class="tech-tile reveal" data-reveal>
-              <span class="tech-tile-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#150458"/><rect x="4" y="5" width="3" height="3" fill="#E70488"/><rect x="4" y="10" width="3" height="9" fill="#E70488"/><rect x="9" y="5" width="3" height="14" fill="#9B59B6"/><rect x="14" y="10" width="3" height="9" fill="#E70488"/><rect x="14" y="5" width="3" height="3" fill="#E70488"/></svg>
-              </span>
-              <span class="tech-tile-label">Pandas</span>
-            </div>
-
-            <div class="tech-tile reveal" data-reveal>
-              <span class="tech-tile-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#013243"/><path fill="#4DABCF" d="M3 12 9 5v4l-3.5 3L9 15v4Z"/><path fill="#FFFFFF" d="M21 12 15 19v-4l3.5-3L15 9V5Z"/></svg>
-              </span>
-              <span class="tech-tile-label">NumPy</span>
-            </div>
-
-            <div class="tech-tile reveal" data-reveal>
-              <span class="tech-tile-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#11557C"/><path fill="#FFFFFF" d="M4 17V9h2v8Zm5 0V6h2v11Zm5 0v-5h2v5Z"/><circle cx="18" cy="6" r="2.2" fill="#FF6B35"/></svg>
-              </span>
-              <span class="tech-tile-label">Matplotlib</span>
-            </div>
-
-            <div class="tech-tile reveal" data-reveal>
-              <span class="tech-tile-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24"><circle cx="9" cy="6" r="3" fill="#F24E1E"/><circle cx="15" cy="6" r="3" fill="#FF7262"/><circle cx="9" cy="12" r="3" fill="#A259FF"/><circle cx="15" cy="12" r="3" fill="#1ABCFE"/><circle cx="9" cy="18" r="3" fill="#0ACF83"/></svg>
-              </span>
-              <span class="tech-tile-label">Figma</span>
-            </div>
-
-            <div class="tech-tile reveal" data-reveal>
-              <span class="tech-tile-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24"><path fill="#F05033" d="M22.5 10.7 13.3 1.5a1.6 1.6 0 0 0-2.3 0L9 3.5l2.6 2.6a1.9 1.9 0 0 1 2.4 2.4l2.5 2.5a1.9 1.9 0 1 1-1.1 1.1L13 9.7v5.6a1.9 1.9 0 1 1-1.6 0V9.5a1.9 1.9 0 0 1-1-2.5L7.9 4.5l-6.4 6.4a1.6 1.6 0 0 0 0 2.3l9.2 9.2a1.6 1.6 0 0 0 2.3 0l9.5-9.5a1.6 1.6 0 0 0 0-2.2Z"/></svg>
-              </span>
-              <span class="tech-tile-label">Git &amp; GitHub</span>
-            </div>
-
-            <div class="tech-tile reveal" data-reveal>
-              <span class="tech-tile-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#000000"/><path fill="#46E3B7" d="M4 16 12 5l8 11h-4.5L12 11.5 8.5 16Z"/></svg>
-              </span>
-              <span class="tech-tile-label">Render</span>
-            </div>
-
-            <div class="tech-tile reveal" data-reveal>
-              <span class="tech-tile-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#0B0D17"/><path fill="#D946EF" d="M4 8h16v2.5H4Zm0 5.5h16V16H4Z"/><circle cx="7" cy="9.2" r="1" fill="#0B0D17"/><circle cx="7" cy="14.8" r="1" fill="#0B0D17"/></svg>
-              </span>
-              <span class="tech-tile-label">Railway</span>
-            </div>
-
+        <div class="process-grid">
+          <div class="process-step reveal" data-reveal>
+            <span class="process-num">01</span>
+            <h3>Plan</h3>
+            <p>Scoped the core flow — browse, cart, OTP-verified signup, and order tracking — before writing any code.</p>
           </div>
+          <div class="process-step reveal" data-reveal>
+            <span class="process-num">02</span>
+            <h3>Design the Schema</h3>
+            <p>Modeled users, products and orders in MongoDB, planning relationships up front to avoid rework later.</p>
+          </div>
+          <div class="process-step reveal" data-reveal>
+            <span class="process-num">03</span>
+            <h3>Build the API</h3>
+            <p>Built REST endpoints in Node.js/Express with JWT auth, bcrypt password hashing, and Brevo SMTP for OTP email delivery.</p>
+          </div>
+          <div class="process-step reveal" data-reveal>
+            <span class="process-num">04</span>
+            <h3>Build the UI</h3>
+            <p>Built a responsive vanilla HTML/CSS/JS front end, including a Telugu voice search feature using the Web Speech API.</p>
+          </div>
+          <div class="process-step reveal" data-reveal>
+            <span class="process-num">05</span>
+            <h3>Fix &amp; Harden</h3>
+            <p>Resolved mobile layout bugs, migrated email delivery to Brevo after an SMTP failure, and fixed sitemap issues in Search Console.</p>
+          </div>
+          <div class="process-step reveal" data-reveal>
+            <span class="process-num">06</span>
+            <h3>Deploy &amp; Monitor</h3>
+            <p>Shipped to Render and set up UptimeRobot to keep the free-tier server awake and reliably reachable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="section section--alt" id="techstack">
+      <div class="container">
+        <div class="section-head section-head--center reveal" data-reveal>
+          <span class="section-eyebrow">Tech Stack</span>
+          <h2 class="section-title">Toolchain I build with.</h2>
+          <p class="section-sub">Working proficiency, self-rated — from daily-driver tools to those I'm still deepening.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-bar reveal" data-reveal data-level="85">
+            <div class="skill-bar-head"><span>JavaScript</span><span class="skill-pct">85%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+          </div>
+          <div class="skill-bar reveal" data-reveal data-level="75">
+            <div class="skill-bar-head"><span>React &amp; Vite</span><span class="skill-pct">75%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+          </div>
+          <div class="skill-bar reveal" data-reveal data-level="80">
+            <div class="skill-bar-head"><span>Node.js &amp; Express</span><span class="skill-pct">80%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+          </div>
+          <div class="skill-bar reveal" data-reveal data-level="78">
+            <div class="skill-bar-head"><span>MongoDB</span><span class="skill-pct">78%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+          </div>
+          <div class="skill-bar reveal" data-reveal data-level="65">
+            <div class="skill-bar-head"><span>PostgreSQL / Supabase</span><span class="skill-pct">65%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+          </div>
+          <div class="skill-bar reveal" data-reveal data-level="82">
+            <div class="skill-bar-head"><span>Python (Pandas, NumPy)</span><span class="skill-pct">82%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+          </div>
+          <div class="skill-bar reveal" data-reveal data-level="70">
+            <div class="skill-bar-head"><span>Git &amp; GitHub</span><span class="skill-pct">70%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+          </div>
+          <div class="skill-bar reveal" data-reveal data-level="60">
+            <div class="skill-bar-head"><span>Figma</span><span class="skill-pct">60%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+          </div>
+        </div>
+
+        <div class="tech-grid" style="margin-top: 44px;">
+          <div class="tech-chip reveal" data-reveal><span class="tech-icon tech-icon--html">5</span>HTML5</div>
+          <div class="tech-chip reveal" data-reveal><span class="tech-icon tech-icon--css">3</span>CSS3</div>
+          <div class="tech-chip reveal" data-reveal><span class="tech-icon tech-icon--js">JS</span>JavaScript</div>
+          <div class="tech-chip reveal" data-reveal><span class="tech-icon tech-icon--react">⚛</span>React</div>
+          <div class="tech-chip reveal" data-reveal><span class="tech-icon tech-icon--vite">V</span>Vite</div>
+          <div class="tech-chip reveal" data-reveal><span class="tech-icon tech-icon--node">N</span>Node.js</div>
+          <div class="tech-chip reveal" data-reveal><span class="tech-icon tech-icon--express">Ex</span>Express.js</div>
+          <div class="tech-chip reveal" data-reveal><span class="tech-icon tech-icon--mongo">M</span>MongoDB</div>
+          <div class="tech-chip reveal" data-reveal><span class="tech-icon tech-icon--python">Py</span>Python</div>
+          <div class="tech-chip reveal" data-reveal><span class="tech-icon tech-icon--pandas">Pd</span>Pandas</div>
+          <div class="tech-chip reveal" data-reveal><span class="tech-icon tech-icon--numpy">Np</span>NumPy</div>
+          <div class="tech-chip reveal" data-reveal><span class="tech-icon tech-icon--plot">Pl</span>Matplotlib</div>
+          <div class="tech-chip reveal" data-reveal><span class="tech-icon tech-icon--figma">Fg</span>Figma</div>
+          <div class="tech-chip reveal" data-reveal><span class="tech-icon tech-icon--git">Gt</span>Git &amp; GitHub</div>
+          <div class="tech-chip reveal" data-reveal><span class="tech-icon tech-icon--render">Rn</span>Render</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head section-head--center reveal" data-reveal>
+          <span class="section-eyebrow">Experience</span>
+          <h2 class="section-title">Where I've worked.</h2>
+          <p class="section-sub">Two internships, two very different focuses — full-stack product work and applied data science.</p>
+        </div>
+
+        <div class="exp-grid">
+          <article class="exp-card reveal" data-reveal>
+            <div class="exp-card-head">
+              <span class="exp-badge">2026 · On-site</span>
+              <h3>Software Engineering Intern</h3>
+              <p class="exp-company">Lumora Systems Pvt. Ltd. · at GVP College</p>
+            </div>
+            <p class="exp-desc">
+              Building full-stack product features as part of an on-site internship, including the Journal
+              Formatter AI writing tool — a React/Vite front end paired with an Express.js backend that calls
+              the Google Gemini API to reformat raw journal entries into clean, structured text. Currently in
+              progress, with deployment work ongoing.
+            </p>
+            <div class="exp-tags"><span>React</span><span>Vite</span><span>Express.js</span><span>Gemini API</span></div>
+          </article>
+
+          <article class="exp-card reveal" data-reveal>
+            <div class="exp-card-head">
+              <span class="exp-badge">2025 · AICTE</span>
+              <h3>Data Science Intern</h3>
+              <p class="exp-company">Infosys Springboard</p>
+            </div>
+            <p class="exp-desc">
+              Completed an AICTE-affiliated Data Science with Python program covering data analysis,
+              preprocessing, and visualization. Applied it directly by building the Accident Analysis System —
+              an interactive Streamlit dashboard analyzing 12,000+ traffic accident records by severity,
+              weather, road, and time of day.
+            </p>
+            <div class="exp-tags"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Streamlit</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section section--alt" id="certifications">
+      <div class="container">
+        <div class="section-head section-head--center reveal" data-reveal>
+          <span class="section-eyebrow">Certifications</span>
+          <h2 class="section-title">Credentials.</h2>
+        </div>
+
+        <div class="cards-grid cards-grid--certs">
+
+          <article class="cert-card reveal" data-reveal>
+            <div class="cert-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="5" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12.5 7 21l5-3 5 3-1.5-8.5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="cert-body">
+              <span class="proj-kicker">2025</span>
+              <h3>Future Interns — Web Development</h3>
+              <p>Worked on real-world web projects, strengthening problem-solving and front-end development skills using HTML, CSS &amp; JavaScript.</p>
+              <a href="future_interns.jpeg" target="_blank" rel="noopener" class="btn btn--outline btn--sm">View Certificate</a>
+            </div>
+          </article>
+
+          <article class="cert-card reveal" data-reveal>
+            <div class="cert-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="5" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12.5 7 21l5-3 5 3-1.5-8.5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="cert-body">
+              <span class="proj-kicker">2025</span>
+              <h3>Infosys Springboard — Data Science with Python</h3>
+              <p>AICTE-affiliated program covering data analysis, preprocessing and visualization using Pandas, NumPy &amp; Matplotlib.</p>
+              <a href="internshipclg.jpeg" target="_blank" rel="noopener" class="btn btn--outline btn--sm">View Certificate</a>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
